@@ -1,18 +1,18 @@
-import { Text, View, Image, Button } from "react-native";
+import { Text, View, Image, Pressable } from "react-native";
 import { useState } from "react";
 import Games from "../components/Games.jsx";
 import gamesData from "../assets/games.json";
+import Button from "../components/Button.jsx";
 
 const balatro = require("../assets/images/Balatro_cover.jpg");
 const eldenRing = require("../assets/images/eldenRing.jpg");
-const bluePrince = require("../assets/images/bluePrince.png")
+const bluePrince = require("../assets/images/bluePrince.png");
 
-
-const images = {"balatro": balatro, "eldenRing": eldenRing, "bluePrince": bluePrince}
+const images = {"balatro": balatro, "eldenRing": eldenRing, "bluePrince": bluePrince};
 
 export default function Index() {
 
-   const [gamesIndex, setMovieIndex] = useState(0)
+   const [gamesIndex, setGamesIndex] = useState(0);
 
   return (
     <View
@@ -22,10 +22,18 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-        <Games gamesData={gamesData[gamesIndex]} image={images[gamesIndex].image}/>
-        <Button title="1" onPress={ () => setMovieIndex(0)}/>
-        <Button title="2" onPress={ () => setMovieIndex(1)}/>
-        <Button title="3" onPress={ () => setMovieIndex(2)}/>
+        <Games gamesData={gamesData[gamesIndex]} image={images[gamesData[gamesIndex].image]}/>
+
+        <View
+            style={{
+                flexDirection: "row",
+                marginTop: 20,
+            }}
+        >
+        <Button setGame={setGamesIndex} label="1" index={0} />
+        <Button setGame={setGamesIndex} label="2" index={1} />
+        <Button setGame={setGamesIndex} label="3" index={2} />
+       </View>
     </View>
   );
 }
