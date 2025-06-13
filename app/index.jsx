@@ -30,9 +30,9 @@ export default function Index() {
                 marginTop: 20,
             }}
         >
-        <Button setGame={setGamesIndex} label="1" index={0} />
-        <Button setGame={setGamesIndex} label="2" index={1} />
-        <Button setGame={setGamesIndex} label="3" index={2} />
+        <Button setGame={setGamesIndex} label="1" index={0} currentIndex={gamesIndex}/>
+        <Button setGame={setGamesIndex} label="2" index={1} currentIndex={gamesIndex}/>
+        <Button setGame={setGamesIndex} label="3" index={2} currentIndex={gamesIndex}/>
        </View>
     </View>
   );

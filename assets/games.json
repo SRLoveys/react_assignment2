@@ -1,23 +1,23 @@
 [
   {
     "Name": "Balatro",
-    "Price": "$",
-    "Awards": "1",
-    "personalRating": "x/10",
+    "Price": "$14.99",
+    "Awards": "17",
+    "personalRating": "10/10",
     "image": "balatro"
   },
   {
     "Name": "Elden Ring",
-    "Price": "$",
-    "Awards": "2",
-    "personalRating": "x/10",
+    "Price": "$59.99",
+    "Awards": "45",
+    "personalRating": "9.5/10",
     "image":  "eldenRing"
   },
   {
     "Name": "Blue Prince",
-    "Price": "$",
-    "Awards": "3",
-    "personalRating": "x/10",
+    "Price": "$29.99",
+    "Awards": "2",
+    "personalRating": "8.5/10",
     "image":  "bluePrince"
   }
 ]

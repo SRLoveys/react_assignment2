@@ -4,10 +4,12 @@ type Props = {
     label: string;
 };
 
-export default function Button({ label, setGame, index }: Props) {
+export default function Button({ label, setGame, index, currentIndex }: Props) {
+    const isActive = index === currentIndex;
+
     return (
         <View style={styles.buttonContainer}>
-          <Pressable style={styles.button} onPress={() => setGame(index)}>
+          <Pressable style={[styles.button, isActive && styles.activeButton]} onPress={() => setGame(index)}>
             <Text style={styles.buttonLabel}>{label}</Text>
           </Pressable>
         </View>
@@ -16,16 +18,17 @@ export default function Button({ label, setGame, index }: Props) {
 
 const styles = StyleSheet.create({
     buttonContainer: {
-        width: 80,
+        width: 100,
         height: 50,
         marginHorizontal: 5,
         alignItems: 'center',
         justifyContent: 'space-evenly',
         padding: 3,
-        backgroundColor: "black"
+        backgroundColor: "black",
+        borderRadius: 25
     },
     button: {
-        borderRadius: 10,
+        borderRadius: 25,
         width: '100%',
         height: '100%',
         alignItems: 'center',
@@ -35,4 +38,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 16,
       },
+    activeButton: {
+        backgroundColor: 'orange'
+        },
     });
