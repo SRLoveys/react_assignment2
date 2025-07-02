@@ -1,18 +1,8 @@
-import { Text, View, Image, Pressable } from "react-native";
-import { useState } from "react";
-import Games from "../components/Games.jsx";
-import gamesData from "../assets/games.json";
-import Button from "../components/Button.jsx";
-
-const balatro = require("../assets/images/Balatro_cover.jpg");
-const eldenRing = require("../assets/images/eldenRing.jpg");
-const bluePrince = require("../assets/images/bluePrince.png");
-
-const images = {"balatro": balatro, "eldenRing": eldenRing, "bluePrince": bluePrince};
+import { Text, View, Image, Button } from "react-native";
+import { useRouter } from 'expo-router';
 
 export default function Index() {
-
-   const [gamesIndex, setGamesIndex] = useState(0);
+  const router = useRouter();
 
   return (
     <View
@@ -22,18 +12,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-        <Games gamesData={gamesData[gamesIndex]} image={images[gamesData[gamesIndex].image]}/>
-
-        <View
-            style={{
-                flexDirection: "row",
-                marginTop: 20,
-            }}
-        >
-        <Button setGame={setGamesIndex} label="1" index={0} currentIndex={gamesIndex}/>
-        <Button setGame={setGamesIndex} label="2" index={1} currentIndex={gamesIndex}/>
-        <Button setGame={setGamesIndex} label="3" index={2} currentIndex={gamesIndex}/>
-       </View>
+       <Text>Welcome to top 3 games</Text>
+       <Button onPress={() => router.navigate('./games')} title="Games"></Button>
     </View>
   );
 }

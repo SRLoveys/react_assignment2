@@ -1,13 +1,13 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 
-export default function Games( {gamesData, image} ) {
+export default function Games( {gameData, image} ) {
     return (
         <>
             <Image source={image} style={styles.image}/>
-            <Text>Game Name: {gamesData.Name}</Text>
-            <Text>Price: {gamesData.Price}</Text>
-            <Text>Awards: {gamesData.Awards}</Text>
-            <Text>Personal Rating: {gamesData.personalRating}</Text>
+            <Text>Game Name: {gameData.Name}</Text>
+            <Text>Price: {gameData.Price}</Text>
+            <Text>Awards: {gameData.Awards}</Text>
+            <Text>Personal Rating: {gameData.personalRating}</Text>
         </>
         )
 
