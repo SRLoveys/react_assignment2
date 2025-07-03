@@ -7,10 +7,16 @@ import { useContext } from 'react';
 import { GamesContext } from '../components/GamesContext'
 
 const balatro = require("../assets/images/Balatro_cover.jpg");
+const balatro2 = require("../assets/images/balatro-review_c8sj.1280.webp")
 const eldenRing = require("../assets/images/eldenRing.jpg");
-const bluePrince = require("../assets/images/bluePrince.png");
+const eldenRing2 = require("../assets/images/Elden_Ring_Shadow_of_the_Erdtree_1.webp")
+const bluePrince = require("../assets/images/bluePrince.jpg");
+const bluePrince2 = require("../assets/images/HouseLandscape1.png")
 
-const images = {"balatro": balatro, "eldenRing": eldenRing, "bluePrince": bluePrince};
+
+const images = {"balatro": balatro, "balatro2": balatro2,
+                "eldenRing": eldenRing, "eldenRing2": eldenRing2,
+                "bluePrince": bluePrince, "bluePrince2": bluePrince2};
 
 export default function Index() {
 

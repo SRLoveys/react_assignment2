@@ -19,7 +19,7 @@ export default function RootLayout() {
       />
       <Tabs.Screen name="updateGames"
                   options={{
-                      title:"Game Info",
+                      title:"Update Game",
                       tabBarIcon: ({color}) => <MaterialIcons size={28} name="360" color={color} />,
                       }}
                   />
